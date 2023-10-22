@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <link rel="stylesheet" href="cloudvandana.css">
+    </head>
+    <body>
+        <script type="text/javascript">
+            function appendExp(ch)
+            {
+                res=ch;
+                document.getElementById("tres").value +=res;
+            }
+            function getResult(){
+                exp= document.getElementById("tres").value;
+                res=eval(exp);
+                document.getElementById("tres").value=res;
+            }
+            function clearDis(){
+                document.getElementById("tres").value = " "
+            }
+        </script>
+
+        <div class="container">
+            <div class="calculator">
+            <div class="resbar">
+                <input type="text" id="tres"><br>
+            </div>
+            <div>
+                <input type="button" id="tbt1" value="1" onclick="appendExp('1')"> 
+                <input type="button" id="tbt2" value="2" onclick="appendExp('2')"> 
+                <input type="button" id="tbt3" value="3" onclick="appendExp('3')"> 
+                <input type="button" id="tbt+" value="+" onclick="appendExp('+')">
+            </div>
+            <div>
+                <input type="button" id="tbt4" value="4" onclick="appendExp('4')"> 
+                <input type="button" id="tbt5" value="5" onclick="appendExp('5')"> 
+                <input type="button" id="tbt6" value="6" onclick="appendExp('6')"> 
+                <input type="button" id="tbt-" value="-" onclick="appendExp('-')">
+            </div>
+            <div>
+                <input type="button" id="tbt7" value="7" onclick="appendExp('7')"> 
+                <input type="button" id="tbt8" value="8" onclick="appendExp('8')"> 
+                <input type="button" id="tbt9" value="9" onclick="appendExp('9')"> 
+                <input type="button" id="tbt*" value="*" onclick="appendExp('*')">
+            </div>
+            <div>
+                <input type="button" id="tbt0" value="0" onclick="appendExp('0')">
+                <input type="button" id="tbtc" value="c" onclick="clearDis()">
+                <input type="button" id="tbt/" value="/" onclick="appendExp('/')">
+                <input type="button" id="tbt=" value="=" onclick="getResult()">
+            </div>
+            </div>
+        </div>
+    </body>
+</html>

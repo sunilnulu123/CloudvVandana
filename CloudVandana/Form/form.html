@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Form</title>
+    </head>
+    <body>
+        <form style="border: 2px;background-color: aqua;">
+            <table align="center">
+                <caption style="font-size: 40px;">Survey Form</caption>
+                <tr>
+                </tr>
+                <tr>
+                    <td><label for="fname">First Name :</label></td>
+                    <td><input type="text" name="fname" id="fname" required pattern="[A-Z][a-z]+"></td>
+                </tr>
+                <tr>
+                    <td><label for="lname">Last Name :</label></td>
+                    <td><input type="text" name="lname" id="lname" required pattern="[A-Z][a-z]+"></td>
+                </tr>
+                <tr>
+                    <td><label for="dob">Date Of Birth :</label></td>
+                    <td><input type="date" name="dob" id="dob" required></td>
+                </tr>
+                <tr>
+                    <td><label for="con">Country :</label></td>
+                    <td><select id="con" name="con" required>
+                        <option value="nil">select country</option>
+                        <option value="IN">India(IN)</option>
+                        <option value="USA">United States of America(USA)</option>
+                        <option1 value="USSR">Russia(USSR)</option1>
+                        <option value="UK">United Kingdon(UK)</option>
+                        <option value="JN">Japan(JN)</option>
+                        <option value="CAN">Canada(CAN)</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td><label for="gen">Gender :</label></td>
+                    <td><input type="radio" name="gen" id="mgen" value="male">Male<br>
+                        <input type="radio" name="gen" id="fgen" value="female">Female<br>
+                        <input type="radio" name="gen" id="ogen" value="other">Others</td>
+                </tr>
+                <tr>
+                    <td><label for="prof">Profession</label></td>
+                    <td><input type="text" name="prof" id="prof" required pattern="[A-Z][a-z]+"></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email :</label></td>
+                    <td><input type="email" name="prof" id="prof"></td>
+                </tr>
+                <tr>
+                    <td><label for="mob">Mobile Number :</label></td>
+                    <td><input type="number" name="mob" id="mob" required pattern="\d{10}" placeholder="No need of country code"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="submit"></td>
+                    <td><input type="reset" value="Reset"></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
